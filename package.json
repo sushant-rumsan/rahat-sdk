@@ -1,0 +1,30 @@
+{
+  "name": "rumsan-monorepo",
+  "version": "0.0.1",
+  "private": true,
+  "scripts": {
+    "build": "turbo build",
+    "dev": "turbo dev",
+    "lint": "turbo lint",
+    "format": "prettier --write \"**/*.{ts,tsx,md}\"",
+    "ui": "pnpm --filter @rumsan/shadcn-ui ui",
+    "gui": "pnpm --filter mobile gui",
+    "prisma:generate": "pnpm --filter api prisma:generate",
+    "clean": "find . -name 'node_modules' -type d -prune -exec rm -rf '{}' + && find . -name 'dist' -exec rm -rf '{}' + && find . -name '.next' -exec rm -rf '{}' + && find . -name '.turbo' -exec rm -rf '{}' +",
+    "publish-packages": "turbo run build lint && changeset version && changeset publish"
+  },
+  "devDependencies": {
+    "@workspace/eslint-config": "workspace:*",
+    "@workspace/typescript-config": "workspace:*",
+    "prettier": "^3.2.5",
+    "turbo": "^2.3.0",
+    "typescript": "5.5.4"
+  },
+  "packageManager": "pnpm@9.12.3",
+  "engines": {
+    "node": ">=20"
+  },
+  "dependencies": {
+    "@changesets/cli": "^2.27.11"
+  }
+}

@@ -1,0 +1,10 @@
+export const CONFIG = {
+  API_URL: process.env.NEXT_PUBLIC_API_URL,
+  WS: {
+    URL: process.env.NEXT_PUBLIC_WS_URL || process.env.NEXT_PUBLIC_SERVER_URL,
+    RECONNECT_INTERVAL: 5000,
+    RECONNECT_ATTEMPTS: 5,
+    RECONNECT_DELAY: 1000,
+    RECONNECT_DELAY_MAX: 5000,
+  },
+};

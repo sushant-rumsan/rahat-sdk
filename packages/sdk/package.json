@@ -1,0 +1,24 @@
+{
+  "name": "@workspace/sdk",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "scripts": {
+    "build": "tsc"
+  },
+  "devDependencies": {
+    "@workspace/typescript-config": "workspace:*",
+    "typescript": "latest"
+  },
+  "exports": {
+    ".": "./src/index.ts",
+    "./clients/*": "./src/clients/*.ts",
+    "./constants/*": "./src/constants/*.ts",
+    "./dtos/*": "./src/dtos/*.ts",
+    "./types/*": "./src/types/*.ts",
+    "./utils/*": "./src/utils/*.ts"
+  },
+  "dependencies": {
+    "@rumsan/sdk": "^0.1.152",
+    "axios": "^1.7.9"
+  }
+}
