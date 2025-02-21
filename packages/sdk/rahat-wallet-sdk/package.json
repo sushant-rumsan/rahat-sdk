@@ -1,0 +1,22 @@
+{
+  "name": "rahat-wallet-sdk",
+  "version": "1.0.0",
+  "main": "index.ts",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "@stellar/freighter-api": "^3.1.0",
+    "@stellar/stellar-sdk": "^13.1.0",
+    "crypto-js": "^4.2.0",
+    "ethers": "^6.13.5",
+    "stellar-sdk": "^13.1.0",
+    "typescript": "^5.7.3"
+  },
+  "devDependencies": {
+    "@types/crypto-js": "^4.2.2"
+  }
+}
